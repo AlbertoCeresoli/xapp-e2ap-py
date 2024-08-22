@@ -73,7 +73,7 @@ def xappLogic():
     initialize_csv()
 
     # Infinite loop to continuously read messages
-    sleep_time = 4
+    sleep_time = 0.5
     while True:
         print(f"Sleeping {sleep_time}s...")
         sleep(sleep_time)

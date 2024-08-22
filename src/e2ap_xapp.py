@@ -201,7 +201,7 @@ class e2apXapp:
         subsequent_action = SubsequentAction()
         subsequent_action.is_valid = 1
         subsequent_action.subsequent_action_type = 1
-        subsequent_action.time_to_wait = 1
+        subsequent_action.time_to_wait = 0.4
         # subsequent_actions.append(subsequent_action)
 
         sub_request = SubRequestMsg()
