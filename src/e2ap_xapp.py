@@ -197,12 +197,17 @@ class e2apXapp:
         # action_definitions.append(action_definition)
 
         subsequent_actions = list()
-
+        '''
         subsequent_action = SubsequentAction()
         subsequent_action.is_valid = 1
         subsequent_action.subsequent_action_type = 1
-        subsequent_action.time_to_wait = 0.4
+        subsequent_action.time_to_wait = 1
         # subsequent_actions.append(subsequent_action)
+        '''
+        subsequent_action = SubsequentAction()
+        subsequent_action.is_valid = 0  # Set to 0 to ensure no subsequent actions
+        subsequent_action.subsequent_action_type = 0 # Choose appropriate type or set to 0
+        subsequent_action.time_to_wait = 0 # Set to 0 to avoid waiting time
 
         sub_request = SubRequestMsg()
         try:
@@ -224,11 +229,13 @@ class e2apXapp:
         subsequent_actions = list()
 
         subsequent_action = SubsequentAction()
+        '''
         subsequent_action.is_valid = 1
         subsequent_action.subsequent_action_type = 1
         subsequent_action.time_to_wait = 1
 
         subsequent_actions.append(subsequent_action)
+        '''
         control_request = ControlRequestMsg()
         try:
             [lencc, bytescc] = control_request.encode(1, 1, 1, bytes([1]), bytes([1]), bytes([1]), 1)
