@@ -8,7 +8,7 @@ from datetime import datetime
 # Append path to RAN protobuf definitions
 sys.path.append("oai-oran-protolib/builds/")
 from ran_messages_pb2 import *
-
+ 
 
 # Function to initialize the CSV file
 def initialize_csv(file_name='gnb_data.csv'):
